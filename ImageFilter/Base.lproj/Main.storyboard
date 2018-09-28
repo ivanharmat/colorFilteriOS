@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageFilter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meadow" translatesAutoresizingMaskIntoConstraints="NO" id="Dee-Zw-DeB">
+                                <rect key="frame" x="0.0" y="24" width="414" height="794"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2mV-dN-2Kx">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="K9p-bp-qRs"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="yKv-ft-cc2"/>
+                                    <barButtonItem title="Original" id="LyZ-pe-agj">
+                                        <connections>
+                                            <action selector="originalActionWithSender:" destination="BYZ-38-t0r" id="8Fs-kx-7xB"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="scp-17-QkT"/>
+                                    <barButtonItem title="Color 1" id="6gx-ov-4QU">
+                                        <connections>
+                                            <action selector="color1WithSender:" destination="BYZ-38-t0r" id="D4k-8y-tMx"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="jSc-md-DJ7"/>
+                                    <barButtonItem title="Color 2" id="HMM-gh-0Wr">
+                                        <connections>
+                                            <action selector="color2WithSender:" destination="BYZ-38-t0r" id="kPj-xg-viD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="shb-Me-ci4"/>
+                                    <barButtonItem title="Color 3" id="u4c-uL-okH">
+                                        <connections>
+                                            <action selector="color3WithSender:" destination="BYZ-38-t0r" id="20N-1K-bBX"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="t5c-P1-qAx"/>
+                                    <barButtonItem title="Random" id="4Rm-LB-A4e">
+                                        <connections>
+                                            <action selector="randomColorWithSender:" destination="BYZ-38-t0r" id="TDu-Au-jm3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="N68-a7-41V"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Dee-Zw-DeB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="DNS-gc-rfs"/>
+                            <constraint firstItem="Dee-Zw-DeB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="GWs-5c-vib"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2mV-dN-2Kx" secondAttribute="trailing" constant="-20" id="HmW-aA-gRc"/>
+                            <constraint firstItem="2mV-dN-2Kx" firstAttribute="top" secondItem="Dee-Zw-DeB" secondAttribute="bottom" id="JHo-bs-9g0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Dee-Zw-DeB" secondAttribute="trailing" constant="-20" id="hH7-gT-Yc0"/>
+                            <constraint firstItem="2mV-dN-2Kx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="qCV-Vh-lkb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2mV-dN-2Kx" secondAttribute="bottom" id="t5S-wW-fql"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Dee-Zw-DeB" id="t8F-js-VLf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="885" y="619"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="meadow" width="800" height="600"/>
+    </resources>
+</document>
